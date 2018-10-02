@@ -1,0 +1,5 @@
+# Ignore dataset folder
+dataset
+
+# Ignore .idea project
+.idea
