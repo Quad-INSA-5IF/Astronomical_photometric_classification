@@ -38,6 +38,11 @@ high error ratio (as the scale is in log). But we must be attentive to the fact 
 so a standard flux error for those values will generate a very high ratio. 
 Ex : `flux = 0.004, err = 4.85` gives `ratio = 1212.5`
 
+### Correlation matrix
+#High correlation in bright blue
+
+
+![png](documentation/playground_4_1.png)
 ### Passband error over class std
 **We compute the ratio as `record.flux_err / std_of_class`**
 ![documentation/flux_err_ratio_over_std_boxplot.png](documentation/flux_err_ratio_over_std_boxplot.png)
