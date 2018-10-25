@@ -54,7 +54,7 @@ really bad but they are a lot of outliers were the error is important.
 ![png](documentation/playground_5_1.png)
 
 ### Intra and Extra galactic class
-**Class : ( 6, 16, 53, 65, 92) Only intra galaxy**
+**Class : ( 6, 16, 53, 65, 92) Only intra galaxy**  
 **Class : (15, 42, 52, 62, 64, 67, 88, 90, 95) Only extra galaxy**
 True = Intra galactic 
 ![png](documentation/playground_9_1.png)
