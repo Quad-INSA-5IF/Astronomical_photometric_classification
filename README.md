@@ -2,26 +2,44 @@
 
 ## Data Analysis
 ### Passband
-Vertical axis: relative flux value
+This graphic represents the distribution of the flux foreach target classes.
+The scale used to compute the y axis is :
 
-Hoziontal axis: mjd (col[0] = fist date of the dataset to col[1096] = last date of the dataset)
+```python
+def rescale(n: float) -> float:
+    if n == 0:
+        return n
+    else:
+        if n < 0:
+            return -log(1 + -n)
+        else:
+            return log(1 + n)
+```
 
-One pixel = One measure for an object at the time mjd, the pixel's color represents it class.
+With this function we have a log rescale that is continue on 0 and accept both positive and negative values.
 
-#### Passband U
-![documentation/flux_0.png](documentation/flux_0.png)
+![documentation/flux_boxplot.png](documentation/flux_boxplot.png)
 
-#### Passband G
-![documentation/flux_1.png](documentation/flux_1.png)
+We can see on the graphic that the classes 1 and 14 have a much more variance other the other classes. We think that the
+classes 3, 4, 7, 9, 11 will be hard to distinguish because the have the same profiles.
 
-#### Passband R
-![documentation/flux_2.png](documentation/flux_2.png)
+### Passband Error
+**We compute the error as `abs(record.flux_err)`**
+![documentation/flux_err_boxplot.png](documentation/flux_err_boxplot.png)
+It's hard to discuss about this graphic because some flux may have really high values.
+So an absolute error analysis may not be meaningful. However we can say that the classes
+with the lowest variations (cf. graphic 1) seem to have lower errors.
 
-#### Passband I
-![documentation/flux_3.png](documentation/flux_3.png)
+### Passband Error ratio
+**We compute the ratio error as `abs(record.flux_err / record.flux)`**
+![documentation/flux_err_ratio_boxplot.png](documentation/flux_err_ratio_boxplot.png)
+We can see that the classes 1 and 14 have the lowest ratio `err / flux`. But we also see that a lot of outliers have very
+high error ratio (as the scale is in log). But we must be attentive to the fact that some flux values are very close to 0
+so a standard flux error for those values will generate a very high ratio. 
+Ex : `flux = 0.004, err = 4.85` gives `ratio = 1212.5`
 
-#### Passband Z
-![documentation/flux_4.png](documentation/flux_4.png)
-
-#### Passband Y
-![documentation/flux_5.png](documentation/flux_5.png)
+### Passband error over class std
+**We compute the ratio as `record.flux_err / std_of_class`**
+![documentation/flux_err_ratio_over_std_boxplot.png](documentation/flux_err_ratio_over_std_boxplot.png)
+If we compare the err over the global standard deviation of the target class we obtain that the measures are in general not
+really bad but they are a lot of outliers were the error is important.
