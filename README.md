@@ -59,3 +59,26 @@ really bad but they are a lot of outliers were the error is important.
 True = Intra galactic 
 ![png](documentation/playground_9_1.png)
 
+### Spatial classes repartition
+
+
+![png](documentation/aitoff_classes.png)
+
+We have also computed the 3D points of objects
+
+```
+x = distmod * cos(gal_b) * sin(gal_l)
+y = distmod * cos(gal_b) * cos(gal_l)
+z = distmod * sin(gal_b)
+```
+![gif](documentation/3d_spatial_classes.gif)
+
+### Cluster of stars outside the Milky Way
+
+![gif](documentation/3d_spatial_ddf.gif)
+
+### Discrimination between classes by specz
+
+![gif](documentation/3d_spatial_specz_classes.gif)
+
+On this animation where objects are spatially represented with their class as colour and their specz as radius, we can observe that the specz measure can be a discriminant factor : yellow and orange objects are generally higher specz than green and purple objects. 
