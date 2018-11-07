@@ -71,15 +71,15 @@ x = distmod * cos(gal_b) * sin(gal_l)
 y = distmod * cos(gal_b) * cos(gal_l)
 z = distmod * sin(gal_b)
 ```
-`![gif](documentation/3d_spatial_classes.gif)` 
+![gif](documentation/3d_spatial_classes.gif)
 
 ### Cluster of stars outside the Milky Way
 
- `![gif](documentation/3d_spatial_ddf.gif)`
+ ![gif](documentation/3d_spatial_ddf.gif)
 
 ### Discrimination between classes by specz
 
-`![gif](documentation/3d_spatial_specz_classes.gif)`
+![gif](documentation/3d_spatial_specz_classes.gif)
 
 On this animation where objects are spatially represented with their class as colour and their specz as radius, we can observe that the specz measure can be a discriminant factor : yellow and orange objects are generally higher specz than green and purple objects. 
 
