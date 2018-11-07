@@ -71,14 +71,50 @@ x = distmod * cos(gal_b) * sin(gal_l)
 y = distmod * cos(gal_b) * cos(gal_l)
 z = distmod * sin(gal_b)
 ```
-![gif](documentation/3d_spatial_classes.gif)
+`![gif](documentation/3d_spatial_classes.gif)` 
 
 ### Cluster of stars outside the Milky Way
 
-![gif](documentation/3d_spatial_ddf.gif)
+ `![gif](documentation/3d_spatial_ddf.gif)`
 
 ### Discrimination between classes by specz
 
-![gif](documentation/3d_spatial_specz_classes.gif)
+`![gif](documentation/3d_spatial_specz_classes.gif)`
 
 On this animation where objects are spatially represented with their class as colour and their specz as radius, we can observe that the specz measure can be a discriminant factor : yellow and orange objects are generally higher specz than green and purple objects. 
+
+
+### Pattern of classes attributes
+
+#### Specz
+
+![png](documentation/classes_hostgal_specz.png)
+
+#### Photoz
+
+![png](documentation/classes_hostgal_photoz.png)
+
+#### Photoz error
+
+![png](documentation/classes_hostgal_photoz_err.png)
+
+#### Mwebv
+
+![png](documentation/classes_mwebv.png)
+
+#### Distmod
+
+![png](documentation/classes_distmod.png)
+
+#### DDF
+
+![png](documentation/classes_ddf.png)
+
+This charts shows that classes inside and outside DDF search space don't follow exactly the same repartition
+
+#### Position
+
+![png](documentation/classes_gal_b.png)
+![png](documentation/classes_gal_l.png)
+
+This charts shows that classes seems to follow the same repartition through the space
